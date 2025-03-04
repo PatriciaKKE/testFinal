@@ -9,58 +9,97 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        
+        .navigation {
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .titre-film {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .titre-film span:first-child {
+            color: rgba(255, 153, 0, 0.911);
+        }
+
+        .titre-film span:last-child {
+            color: white;
+        }
+
+        .dropdown-menu {
+            background-color: rgb(77, 75, 75);
+            border: 1px solid color(white);
+        }
+        .dropdown-itemP:hover{
+            color: black;
+            background-color: rgba(255, 153, 0, 0.911);
+        }
+        .dropdown-item:hover{
+            color: black;
+            background-color: rgba(255, 153, 0, 0.911);
+        }
     </style>
 </head>
 
 <body>
     <header id="header">
-        <div id="main-content">
-            <nav class="nav">
-                <div class="container">
-                    <a class="titre-film" href="#"><span>FLIX</span><span>PRIME</span></a>
-                    <button classe="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <nav class="navigation">
+            <div class="container">
+                <a class="titre-film" href="#"><span>FLIX</span><span>PRIME</span></a>
+                <button classe="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Foyer">Foyer</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Acera">Acera</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#Contenido">Contenido</a>
-                            </li>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Foyer">Foyer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Acera">Acera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contenido">Contenido</a>
+                        </li>
 
-                            <li class="nav-item-droppdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false"> Elige Tu Pais</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#" data-genre="peru">Peru</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Argentina">Argentina</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Boliva">Boliva</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="chile">Chile</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Colombia">Colombia</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Costa Rica">Costa Rica</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Ecuador">Ecuador</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Mexico">Mexico</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Panama">Panama</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Paraguay">Paraguay</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Uruguay">Uruguay</a></li>
-                                    <li><a class="dropdown-item" href="#" data-genre="Vnezuela">Venezuela</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <li class="nav-item-droppdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"> Elige Tu Pais</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#" data-genre="peru">Peru</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Argentina">Argentina</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Boliva">Boliva</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="chile">Chile</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Colombia">Colombia</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Costa Rica">Costa Rica</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Ecuador">Ecuador</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Mexico">Mexico</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Panama">Panama</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Paraguay">Paraguay</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Uruguay">Uruguay</a></li>
+                                <li><a class="dropdown-item" href="#" data-genre="Vnezuela">Venezuela</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                        <button class="contact">Contactar ventas</button>
-                    </div>
+                    <button class="contact">Contactar ventas</button>
                 </div>
-            </nav>
+            </div>
+        </nav>
+
+        <div id="home" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./image/img2.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+            </div>
         </div>
+
+
     </header>
 </body>
 
