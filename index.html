@@ -34,13 +34,65 @@
             border: 1px solid color(white);
         }
         .dropdown-itemP:hover{
-            color: black;
+            color: white;
+            font-size: 2px;
             background-color: rgba(255, 153, 0, 0.911);
         }
         .dropdown-item:hover{
-            color: black;
+            color: white;
             background-color: rgba(255, 153, 0, 0.911);
         }
+        .carousel-item {
+            position: relative;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .carousel-item::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 500px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            z-index: 2;
+        }
+
+        .carousel-indicators {
+            margin-bottom: 170px;
+            color:rgba(255, 153, 0, 0.911);
+        }
+
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 30px;
+            margin: 0 20px;
+            color: rgba(255, 153, 0, 0.911);
+        }
+        .bar .btn {
+            background-color: rgba(255, 153, 0, 0.911);
+            color: white;
+            border: none;
+            margin-left: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+        .watch-trailer-btn {
+            background-color: rgba(255, 153, 0, 0.911);;
+            color: white;
+            border-radius: 1px rgba(255, 153, 0, 0.911);;
+        }
+
+
     </style>
 </head>
 
@@ -49,10 +101,6 @@
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container">
                 <a class="titre-film" href="#"><span>FLIX</span><span>PRIME</span></a>
-                <button classe="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
@@ -60,13 +108,13 @@
                             <a class="nav-link" href="#Foyer">Foyer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Acera">Acera</a>
+                            <a class="nav-link" href="#Acera">Acera</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#Contenido">Contenido</a>
                         </li>
 
-                        <li class="nav-item-droppdown">
+                        <li class="nav-item-dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false"> Elige Tu Pais</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -85,8 +133,9 @@
                             </ul>
                         </li>
                     </ul>
-
-                    <button class="btn btn-dark btn-sm">LOGIN</button>
+                    <div class="bar">
+                    <button class="btn btn-dark btn-sm">CONTACTA VENTAS</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -95,44 +144,30 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="image/banner1.jpg" class="d-block w-100" alt="Slide 1">
-                    <p class="ecrit1">Todo por solo S/19.90 al mes</p>
-                    <h3>Todos los animes, encuentralos aqu</h3>
                 </div>
 
                 <div class="carousel-item active">
-                    <p class="ecrit1">Todo por solo S/19.90 al mes</p>
-                    <h3>Las peloculas mas tequillera</h3>
                     <img src="image/banner2.jpg" class="d-block w-100" alt="Slide 2">
                 </div>
 
                 <div class="carousel-item active">
-                    <p class="ecrit1">Todo por solo S/19.90 al mes</p>
-                    <h3>Todo el f'tbolique mundiel</h3>
                     <img src="image/banner3.jpg" class="d-block w-100" alt="Slide 3">
                 </div>
 
                 <div class="carousel-item active">
                     <img src="image/banner4.jpg" class="d-block w-100" alt="Slide 4">
-                    <p class="ecrit1">Todo por solo S/19.90 al mes</p>
-                    <h3>Todos los animes, encuentralos aqu</h3>
                 </div>
 
                 <div class="carousel-item active">
-                    <h3>Peliculas cl'sicas de toda la vida</h3>
-                    <p class="ecrit1">Todo por solo S/19.90 al mes</p>
                     <img src="image/banner5.jpg" class="d-block w-100" alt="Slide 5">
                 </div>
 
                 <div class="carousel-item active">
-                    <h3>TV local en vivo de toda latinoamérica </h3>
-                    <p class="ecrit1">Todo por solo S/19.90 al mes</p>
                     <img src="image/banner6.jpg" class="d-block w-100" alt="Slide 6">
                 </div>
             </div>
 
-            <div class="watch-container">
                 <button class="watch-trailer-btn">WATCH TRAILER</button> 
-            </div>
 
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active" aria-current="true"
@@ -145,7 +180,7 @@
             </div>
         </div>
 
-        
+
     </header>
 </body>
 
